@@ -29,6 +29,9 @@ class AddViewController: UIViewController {
             return
                     }
         
+        listVC?.toDoList.append(text)
+        listVC?.toDoTableView.reloadData()
+        //아울렛은 인스턴스 프로퍼티라서 바로 접근이 가능하고, 이건 테이블 뷰에게 새로운 데이터가 있다고 알려주는 것임
         dismiss(animated: true)
     }
     
