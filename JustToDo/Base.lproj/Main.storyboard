@@ -76,9 +76,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="할 일 추가" id="MSF-Z4-hbw">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Pgh-jE-hzs"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="f4b-Qd-pSw"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Pgh-jE-hzs">
+                            <connections>
+                                <action selector="cancel:" destination="ft1-TN-L7o" id="3Y5-32-aG3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="f4b-Qd-pSw">
+                            <connections>
+                                <action selector="save:" destination="ft1-TN-L7o" id="9H2-Ab-3Ia"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="inputField" destination="Oze-Ze-525" id="zG4-zx-YKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6u-Zt-Pdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
