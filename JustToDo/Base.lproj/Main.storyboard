@@ -12,7 +12,7 @@
         <!--To Do-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JustToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="JustToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,11 +39,50 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="To Do" id="6rM-9a-5GP"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="To Do" id="6rM-9a-5GP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QDp-WY-E0N">
+                            <connections>
+                                <segue destination="lKf-c1-oFM" kind="presentation" id="uaE-jX-3VT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028.2442748091603" y="-27.464788732394368"/>
+        </scene>
+        <!--할 일 추가-->
+        <scene sceneID="1Ji-4a-Mhu">
+            <objects>
+                <viewController id="ft1-TN-L7o" customClass="AddViewController" customModule="JustToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uf5-VB-mah">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oze-Ze-525">
+                                <rect key="frame" x="16" y="86" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vay-G2-sDm"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oze-Ze-525" firstAttribute="top" secondItem="vay-G2-sDm" secondAttribute="top" constant="30" id="BBk-6W-vNB"/>
+                            <constraint firstItem="vay-G2-sDm" firstAttribute="trailing" secondItem="Oze-Ze-525" secondAttribute="trailing" constant="16" id="nLg-ef-XsS"/>
+                            <constraint firstItem="Oze-Ze-525" firstAttribute="leading" secondItem="vay-G2-sDm" secondAttribute="leading" constant="16" id="vHl-Ji-882"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="할 일 추가" id="MSF-Z4-hbw">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Pgh-jE-hzs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="f4b-Qd-pSw"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H6u-Zt-Pdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2741.2213740458014" y="-27.464788732394368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ay3-qE-DHL">
@@ -62,6 +101,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCf-sy-prU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9C2-Ib-UOf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lKf-c1-oFM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KaK-38-xpC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ft1-TN-L7o" kind="relationship" relationship="rootViewController" id="WjB-U7-HiJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YqC-Fc-P9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814.5038167938931" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
